@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // Elimina la opción output: 'export'
 };
 
 export default nextConfig;
