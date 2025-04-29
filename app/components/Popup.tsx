@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Popup: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -31,9 +32,15 @@ const Popup: React.FC = () => {
 
             {/* Contenido en primer plano */}
             <div className="relative z-10 p-6 text-center bg-gray-800 rounded-lg shadow-lg bg-opacity-80">
-              <h2 className="mb-4 text-2xl font-bold text-white">¡EXF21 se acerca!</h2>
+            <Image
+                  className="m-auto scale-155" 
+                  src="/images/exf.png"
+                  alt="Logo"
+                  width={200}
+                  height={200}
+                />
               <p className="mb-4 text-white">
-                Acompáñanos en el evento de MMA más esperado del año.
+                Adquiere tus entradas para <span className="font-bold"> EXF 21: A Decade of Dominance</span>
               </p>
               <p className="mb-4 text-sm font-medium text-white">
                 📍 Gimnasio Oscar &quot;Tigre&quot; Garcia<br />
@@ -41,7 +48,7 @@ const Popup: React.FC = () => {
                 🕘 Puertas se abren a las 5:00 P.M.
               </p>
               <p className="mb-6 text-sm text-white"> 
-                ¡No te lo pierdas! Luchadores de alto nivel, emoción y adrenalina en cada pelea.
+                ¡No te lo pierdas! Peleadores que han estado en las ligas mas grandes, emoción y adrenalina en cada pelea.
               </p>
               <div className="space-y-4">
                 <Link
