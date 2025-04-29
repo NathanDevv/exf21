@@ -40,7 +40,7 @@ const Popup: React.FC = () => {
                 📅 Sábado 3 de Mayo<br />
                 🕘 Puertas se abren a las 5:00 P.M.
               </p>
-              <p className="mb-6 text-sm text-white"> c
+              <p className="mb-6 text-sm text-white"> 
                 ¡No te lo pierdas! Luchadores de alto nivel, emoción y adrenalina en cada pelea.
               </p>
               <div className="space-y-4">
