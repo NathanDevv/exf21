@@ -1,5 +1,5 @@
 // app/components/Nav.tsx
-import Link from 'next/link';
+import Link from "next/link";
 
 interface NavProps {
   isOpen: boolean;
@@ -10,48 +10,58 @@ const Nav = ({ isOpen, setIsOpen }: NavProps) => {
   return (
     <nav>
       {/* Menú para pantallas grandes */}
-      <ul className="hidden lg:flex space-x-8">
+      <ul className="hidden space-x-8 lg:flex">
         <li>
           <Link href="/" className="text-white hover:text-yellow-500">
-            Home
+            Princpal
           </Link>
         </li>
         <li>
           <Link href="/about" className="text-white hover:text-yellow-500">
-            About
+            Acerca de
           </Link>
         </li>
         <li>
           <Link href="/contact" className="text-white hover:text-yellow-500">
-            Contact
+            Contacto
           </Link>
         </li>
         <li>
           <Link href="/events" className="text-white hover:text-yellow-500">
-            Events
+            Eventos
           </Link>
         </li>
       </ul>
 
       {/* Botón de menú hamburguesa - solo visible en móviles */}
-      <div className="lg:hidden flex items-center">
+      <div className="flex items-center lg:hidden">
         <button
           className="flex flex-col justify-between w-8 h-6 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          <span className={`h-1 bg-white rounded transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`h-1 bg-white rounded ${isOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`h-1 bg-white rounded transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <span
+            className={`h-1 bg-white rounded transition-transform ${
+              isOpen ? "rotate-45 translate-y-2" : ""
+            }`}
+          ></span>
+          <span
+            className={`h-1 bg-white rounded ${isOpen ? "opacity-0" : ""}`}
+          ></span>
+          <span
+            className={`h-1 bg-white rounded transition-transform ${
+              isOpen ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          ></span>
         </button>
       </div>
 
       {/* Menú hamburguesa - solo visible cuando el estado isOpen es true */}
       {isOpen && (
-        <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-6 pt-24">
+        <div className="fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-full h-full pt-24 space-y-6 bg-black lg:hidden bg-opacity-90">
           {/* Botón para cerrar el menú */}
           <button
-            className="absolute top-4 right-4 text-white text-3xl"
+            className="absolute text-3xl text-white top-4 right-4"
             onClick={() => setIsOpen(false)}
             aria-label="Close Menu"
           >
@@ -66,7 +76,7 @@ const Nav = ({ isOpen, setIsOpen }: NavProps) => {
                 className="text-white hover:text-yellow-500"
                 onClick={() => setIsOpen(false)}
               >
-                Home
+                Principal
               </Link>
             </li>
             <li>
@@ -75,7 +85,7 @@ const Nav = ({ isOpen, setIsOpen }: NavProps) => {
                 className="text-white hover:text-yellow-500"
                 onClick={() => setIsOpen(false)}
               >
-                About
+                Acerca de
               </Link>
             </li>
             <li>
@@ -84,7 +94,7 @@ const Nav = ({ isOpen, setIsOpen }: NavProps) => {
                 className="text-white hover:text-yellow-500"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                Contacto
               </Link>
             </li>
             <li>
@@ -93,7 +103,7 @@ const Nav = ({ isOpen, setIsOpen }: NavProps) => {
                 className="text-white hover:text-yellow-500"
                 onClick={() => setIsOpen(false)}
               >
-                Events
+                Eventos
               </Link>
             </li>
           </ul>

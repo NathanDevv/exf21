@@ -1,11 +1,12 @@
 "use client";
 
 // app/page.tsx
-import Link from 'next/link';
-import React from 'react';
-import { motion } from 'framer-motion'; // Importamos motion
-import Popup from './components/Popup';
-import About from './components/About';
+import Link from "next/link";
+import React from "react";
+import { motion } from "framer-motion"; // Importamos motion
+import Popup from "./components/Popup";
+import About from "./components/About";
+import News from "./components/News";
 
 export default function HomePage() {
   return (
@@ -32,7 +33,7 @@ export default function HomePage() {
             className="mb-4 text-4xl font-bold md:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
             Bienvenido a EXF
           </motion.h1>
@@ -42,7 +43,7 @@ export default function HomePage() {
             className="mb-6 text-lg md:text-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
             Elite Xtreme Fighting — Donde nacen las leyendas del MMA
           </motion.p>
@@ -58,6 +59,7 @@ export default function HomePage() {
       </section>
 
       <About />
+      <News />
     </div>
   );
 }
