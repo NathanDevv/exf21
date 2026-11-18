@@ -21,7 +21,7 @@ export default function HomePage() {
           loop
           playsInline
         >
-          <source src="/video/exf.mp4" type="video/mp4" />
+          <source src="/video/promo.mp4" type="video/mp4" />
           Tu navegador no soporta el video.
         </video>
 
